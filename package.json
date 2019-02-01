@@ -16,6 +16,7 @@
     "express-handlebars": "^3.0.0",
     "lint": "^1.1.2",
     "mysql2": "^1.6.4",
+    "nightmare": "^3.0.1",
     "sequelize": "^4.41.2"
   },
   "devDependencies": {
@@ -25,6 +26,10 @@
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
   }
