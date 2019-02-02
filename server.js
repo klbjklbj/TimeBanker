@@ -1,6 +1,6 @@
 require("dotenv").config();
 var express = require("express");
-var exphbs = require("express-handlebars");
+// var exphbs = require("express-handlebars");
 
 var db = require("./models");
 
@@ -25,7 +25,7 @@ app.use(express.static("public"));
 // require("./routes/apiRoutes")(app);
 // require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
