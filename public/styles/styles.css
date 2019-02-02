@@ -1,3 +1,49 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  background-color: black
+
+}
+
+#topBar {
+  margin-top: 1.5em;
+  background-color: #ffffff;
+  border-bottom: solid;
+  border-bottom-width: 0.0625em;
+  border-color: #808080;
+  overflow: auto;
+  z-index: 1;
+}
+
+#donationButton {
+  margin-top:5%
+}
+
+#skillBank{
+  background-color: #ffffff;
+  margin-top: 10%;
+  border-radius: 0.5em;
+}
+
+.media{
+  margin: 1em;
+}
+
+.mr-3{
+  margin: 1em;
+}
+
+.media-body{
+  margin: 1em;
+}
+
+footer{
+  font-size: large;
+  text-align: center;
+  color: whitesmoke;
+  background-color: rgb(40, 38, 38);
+  padding: 0.75em;
+  padding-top:1em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 4;
 }
