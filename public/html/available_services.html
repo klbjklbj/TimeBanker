@@ -40,7 +40,7 @@
 
         <div class="col-lg-8 col-med-0 col-sm-0" id="centerBody">
             <ul class="list-unstyled" id="skillBank">
-                <li class="media" data-toggle="modal" data-target="#exampleModal" data-whatever="user@mail">
+                <li class="media" data-toggle="modal" data-target="#emailModal" data-whatever="user@mail">
                     <img src="https://www.placecage.com/75/75" class="mr-3" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1">Nicholas Cage</h5>
@@ -50,7 +50,7 @@
                     </div>
                 </li>
                 <a href=""></a>
-                <li class="media" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <li class="media" data-toggle="modal" data-target="#emailModal" data-email="@mdo">
                     <img src="https://www.fillmurray.com/75/75" class="mr-3" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1">Bill Murray</h5>
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                 </li>
-                <li class="media" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <li class="media" data-toggle="modal" data-target="#emailModal" data-whatever="@mdo">
                     <img src="https://placekitten.com/75/75" class="mr-3" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1">Kitten</h5>
@@ -89,7 +89,7 @@
 
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -113,7 +113,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    <button type="button" class="btn btn-primary" id="sendMessage">Submit Time Request</button>
                 </div>
             </div>
         </div>
@@ -121,13 +121,10 @@
 
     <script type="text/javascript">
         // When the submit button is clicked run this function instead of doing the default thing
-        $(".media").on("click", function (event) {
+        $("#sendMessage").on("click", function (event) {
             // prevents the default action of the #submit button
             event.preventDefault();
             console.log('you clicked');
-            function open (exampleModal) {
-                $("#exampleModal").modal('show');
-            }
         });
     </script>
 </body>
