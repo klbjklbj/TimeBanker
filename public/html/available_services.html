@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TimeBanker</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="row" id="topBar">
+
+        <div class="col-lg-4 col-med-0 col-sm-0" id="topLeft">
+            <!-- empty for formatting -->
+        </div>
+
+        <div class="col-lg-4 col-med-0 col-sm-0 text-center" id="topCenter">
+
+            <h1 id="title">
+                TIME BANKER
+            </h1>
+
+        </div>
+
+        <div class="col-lg-4 col-med-0 col-sm-0 text-center" id="topLeft">
+            <button id="donationButton">Make a Donation</button>
+        </div>
+
+    </div>
+
+    <div class="row" id="body">
+
+        <div class="col-lg-2 col-med-0 col-sm-0" id="leftBody">
+            <!-- EMPTY -->
+        </div>
+
+        <div class="col-lg-8 col-med-0 col-sm-0" id="centerBody">
+            <ul class="list-unstyled" id="skillBank">
+                <li class="media" data-toggle="modal" data-target="#emailModal" data-whatever="user@mail">
+                    <img src="https://www.placecage.com/75/75" class="mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">Nicholas Cage</h5>
+                        <p>
+                            Skill: Acting
+                        </p>
+                    </div>
+                </li>
+                <a href=""></a>
+                <li class="media" data-toggle="modal" data-target="#emailModal" data-email="@mdo">
+                    <img src="https://www.fillmurray.com/75/75" class="mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">Bill Murray</h5>
+                        <p>
+                            Skill: Acting
+                        </p>
+                    </div>
+                </li>
+                <li class="media" data-toggle="modal" data-target="#emailModal" data-whatever="@mdo">
+                    <img src="https://placekitten.com/75/75" class="mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">Kitten</h5>
+                        <p>
+                            Skill: Cuddling/attacking feet from under the bed.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-2 col-med-0 col-sm-0" id="leftBody">
+            <!-- EMPTY -->
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-12">
+
+            <footer>
+                copyright &copy;
+            </footer>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="sendMessage">Submit Time Request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // When the submit button is clicked run this function instead of doing the default thing
+        $("#sendMessage").on("click", function (event) {
+            // prevents the default action of the #submit button
+            event.preventDefault();
+            console.log('you clicked');
+        });
+    </script>
+</body>
+
+
+</html>
