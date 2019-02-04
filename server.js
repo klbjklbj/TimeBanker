@@ -45,8 +45,8 @@ app.post("/subscribe", (req, res) => {
     if (body.success !== undefined && !body.success) {
       return res.json({ "success": false, "msg": "Failed captcha" });
     }
-    //if successful...
-    
+    //if successful code goes below...
+
     //This is where we send data to db
     
 
