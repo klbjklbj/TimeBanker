@@ -32,23 +32,6 @@ module.exports = function(sequelize, DataTypes) {
     } 
   });
 
-  // User.sync().then(() => {
-  //   User.create({
-  //     firstName: 'Leonard',
-  //     lastName: 'Nimoy',
-  //     skill: 'Logic and Mind Melding',
-  //     email: 'spock@vulcan.con',
-  //     image: 'https://66.media.tumblr.com/c8945ee30829cb081e4c2eeaca115b16/tumblr_plxye0xXPy1w314t0o1_540.png'
-  //   });
-  //   User.create({
-  //     firstName: 'William',
-  //     lastName: 'Shatner',
-  //     skill: 'Captain',
-  //     email: 'kirk@enterprise.com',
-  //     image: 'https://www.gettyimages.com/detail/news-photo/canadian-actor-william-shatner-as-captain-james-t-kirk-in-news-photo/81792246'
-  //   });
-  // });
-
   return User;
 };
 
