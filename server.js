@@ -80,7 +80,7 @@ app.post("/subscribe", (req, res) => {
 
 // Routes
 require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 // TODO:This has something to do with resetting the database during testing?  See code below...
 var syncOptions = { force: true };
