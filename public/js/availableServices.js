@@ -24,13 +24,15 @@ $(document).ready(function () {
             let skill = $(`<p>`)
                 .text(currentUser.skill);
 
+            let fullName = currentUser.firstName + ` ` + currentUser.lastName;
+
             let name = $(`<h5 class="mt-0 mb-1">`)
-                .text(currentUser.name);
+                .text(fullName);
 
             let mediaBody = $(`<div class="media-body">`)
                 .append(name, skill);
 
-            let mediaImage = $(`<img class="mr-3" alt="...">`)
+            let mediaImage = $(`<img class="mr-3" id="userImage" alt="...">`)
                 .attr({
                     src: currentUser.image
                 });

@@ -36,6 +36,11 @@ body {
   margin: 1em;
 }
 
+#userImage{
+  width: 4.5em;
+  height: 4.5em;
+}
+
 footer{
   font-size: large;
   text-align: center;
