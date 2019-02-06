@@ -51,8 +51,8 @@ app.post("/subscribe", (req, res) => {
   // req.connection.remoteAddress will provide IP address of connected user.
   var verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}&remoteip=${req.connection.remoteAddress}`;
 
-  //Make request to verifyUrl
-  request(verifyUrl, (err, response, body)=> {
+  //Make request to verifyUrl for reCaptcha
+  request(verifyUrl, (err, response, body) => {
     body = JSON.parse(body);
     //if not successful
     if (body.success !== undefined && !body.success) {
@@ -60,12 +60,13 @@ app.post("/subscribe", (req, res) => {
     }
     //if successful code goes below...
 
-    //This is where we send data to db
-    
+    // **********THIS IS WHERE WE SEND DATA TO DATABASE*************
+
+
+    // ***********WE ALSO NEED CODE to Reload the current document so new user can now login***************
 
     return res.json({ "success": true, "msg": "Successful captcha" });
 
-    
   });
 });
 
