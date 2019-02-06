@@ -113,7 +113,7 @@ db.sequelize.sync(syncOptions).then(() => {
     lastName: 'Shatner',
     skill: 'Captain',
     email: 'kirk@enterprise.com',
-    image: 'https://www.gettyimages.com/detail/news-photo/canadian-actor-william-shatner-as-captain-james-t-kirk-in-news-photo/81792246',
+    image: 'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1492180288/articles/2015/06/20/captain-kirk-s-new-wild-ride/150619-joiner-shatner-tease_ixfuni',
     password: 'beammeupscotty',
     address: '2458 Linden Ave.',
     city: 'Chicago',

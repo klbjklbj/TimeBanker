@@ -20,14 +20,14 @@ $(document).ready(function () {
 
             // variable that dynamically creates an html <p> tag and using .text() inserts the text found in the skill column of the userdb
             let skill = $(`<p>`)
-                .text(currentUser.skill);
+                .text(`Skill: ${currentUser.skill}`);
 
             // fullName uses string interpolation to combine firstName and lastName columns of userdb for each user into a single variable.
             let fullName = `${currentUser.firstName} ${currentUser.lastName}`;
 
             // name renders the header html element of the bootstrap media-object and inserts the fullName variable for each user into the that element using .text(). 
             let name = $(`<h5 class="mt-0 mb-1">`)
-                .text(fullName);
+                .text(`Name: ${fullName}`);
 
             // this follows the ame pattern as the two lines of code above but the appends the two previous variables to it.
             let mediaBody = $(`<div class="media-body">`)
