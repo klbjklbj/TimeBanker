@@ -1,12 +1,12 @@
 body {
   background-color: black;
-  background-image: url("/public/images/background.jpg")
+  background-image: url("https://blog.malwarebytes.com/wp-content/uploads/2014/04/photodune-7197630-time-concept-clock-on-digital-background-m.jpg")
 
 }
 
 #topBar {
   margin-top: 1.5em;
-  background-color: #ffffff;
+  background-color: #ffffff81;
   border-bottom: solid;
   border-bottom-width: 0.0625em;
   border-color: #808080;
@@ -19,9 +19,11 @@ body {
 }
 
 #skillBank{
-  background-color: #ffffff;
-  margin-top: 10%;
+  background-color: #151616a8;
+  /* background-image: url("https://blog.malwarebytes.com/wp-content/uploads/2014/04/photodune-7197630-time-concept-clock-on-digital-background-m.jpg") */
+  /* margin-top: 10%; */
   border-radius: 0.5em;
+  color: rgb(236, 233, 233);
 }
 
 .media{
@@ -34,6 +36,11 @@ body {
 
 .media-body{
   margin: 1em;
+}
+
+#userImage{
+  width: 4.5em;
+  height: 4.5em;
 }
 
 footer{
