@@ -1,5 +1,6 @@
 body {
-  background-color: black
+  background-color: black;
+  background-image: url("/public/images/background.jpg")
 
 }
 
@@ -46,4 +47,7 @@ footer{
   width: 100%;
   bottom: 0;
   z-index: 4;
+}
+#registerModal {
+  
 }

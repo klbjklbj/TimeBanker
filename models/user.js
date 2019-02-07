@@ -32,6 +32,7 @@ module.exports = function(sequelize, DataTypes) {
     } 
   });
 
+<<<<<<< HEAD
   user.sync().then(() => {
     User.create({
       firstName: 'Leonard',
@@ -50,5 +51,8 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   return user;
+=======
+  return User;
+>>>>>>> 2050151e5d2f03b7ae196d674347100e449b9b72
 };
 
