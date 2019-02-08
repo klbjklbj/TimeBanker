@@ -84,7 +84,7 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 // TODO:This has something to do with resetting the database during testing?  See code below...
-var syncOptions = { force: true };
+var syncOptions = { force: false }; // check this out !!!
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
