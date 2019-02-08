@@ -1,6 +1,8 @@
 body {
   background-color: black;
+
   background-image: url("../images/time-wallpaper-23.jpg");
+
 }
 #logo {
   color: white;
@@ -37,6 +39,7 @@ p {
   border-color: #808080;
   border: solid;
   border-width: 2px; 
+
 }
 
 #topBar {

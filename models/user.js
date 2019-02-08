@@ -1,5 +1,5 @@
-module.exports = function(sequelize, DataTypes) {
-  let User = sequelize.define("User", {
+module.exports = function (sequelize, DataTypes) {
+  var User = sequelize.define("User", {
 
     firstName: {
       type: DataTypes.STRING,
@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: false
     },
-    
+
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -75,7 +75,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-
   return User;
 };
-
