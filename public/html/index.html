@@ -24,92 +24,65 @@
     <br>
     <!-- Modals for login and register -->
     <div class="row" id="navbar">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-2">
+            <a href="./howitworks.html">
+                <h5 class="mt-5">How It Works</h5>
+            </a>
+        </div>
+        <div class="col-md-2">
+            <div class="media" data-toggle="modal" data-target="#registerModal">
+                <div class="media-body">
+                    <h5 class="mt-3">Register</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
             <div class="navbar navbar-expand-lg navbar-light">
                 <div class="col-lg-12 text-center" id="topCenter">
                     <a href="../html/index.html">
-                        <h1 id="logo">TIMEBANKER</h1>
+                        <h1 id="logo" class="mt-4">TIMEBANKER</h1>
                     </a>
                 </div>
             </div>
 
         </div>
-
-        <div class="col-md-1">
-            <div class="media" data-toggle="modal" data-target="#registerModal">
-                <div class="media-body">
-                    <h5 class="mt-0 mb-1">Register</h5>
-                </div>
-            </div>
+        <div class="col-md-2">
+            <a href="mailto:webmaster@example.com">
+                <h5 class="mt-5">Contact us</h5>
+            </a>
         </div>
-        <div class="col-md-1">
-            <div class="media" data-toggle="modal" data-target="#loginModal">
-                <div class="media-body">
-                    <h5 class="mt-0 mb-1">Login</h5>
-                </div>
-            </div>
+        <div class="col-md-2">
+            <h5 class="mt-5">Donate</h5>
         </div>
     </div>
 
+    <!-- Login -->
     <div class="container">
-        <div class="row">
-            <!-- Embeded video -->
-            <div class="col-md-10">
-                <div id="infoTimeBank">
-                    <p>A time bank is a reciprocity-based work trading system in which hours are the
-                        currency. With time banking, a person with one skill set can bank and trade hours of work for
-                        equal
-                        hours of work in another skill set instead of paying or being paid for services.</p>
-
-                    <p>The hours banked are always traded equally regardless of the services rendered. This equality is
-                        intended to foster ties in communities and, by making all contributions valued equally,
-                        encourage
-                        equality in the communities themselves.</p>
-
-                    <p>The system of time banking has some restrictions. For example, it must avoid assigning any
-                        services
-                        or hours banked a monetary value as this would make them taxable. This restriction means that
-                        workers can’t easily offer services outside the community.</p>
-
-                    <p>Critics also fear that time banking could distort market forces, causing economic problems.
-                        However, with the economic problems already stemming from free market economies in recent
-                        years,
-                        the system is often seen as more of a solution than a threat.</p>
-
-                    <p>Time banking was invented in 1980 by Edgar Cahn, an American professor of Law, to address
-                        unfulfilled societal needs in the wake of cuts to social programs during the Reagan
-                        administration.
-                        Cahn said he created the system as a way to reward “decency, caring and a passion for justice.”
-                        This video describes the time bank concept and how it works:</p>
+        <form>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="InputUsername">Username</label>
+                        <input type="Username" class="form-control" id="InputUsername" aria-describedby="emailHelp"
+                            placeholder="Enter Username">
+                    </div>
                 </div>
-                <div class="container rounded mx-auto d-block">
-                    <iframe width="760" height="515" src="https://www.youtube.com/embed/aB8ifVJ34JU" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- Card -->
-            <div class="col-md-2">
-                <div class="card text-center mt-5" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Contact us</h5>
-                        <a href="mailto:webmaster@example.com" class="btn btn-primary">Contact</a>
-                        <h5 id="weatherAPI">Here goes weather API</h5>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="InputPassword">Password</label>
+                        <input type="password" class="form-control" id="InputPassword" placeholder="Password">
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <!-- Footer -->
-    <div class="row">
-        <div class="col-12">
-            <footer>
-                <h6>Copyright &copy;</h6>
-            </footer>
-        </div>
-    </div>
-
+    <!-- <div class="row">
+        <footer>
+            <h6>Copyright &copy;</h6>
+        </footer>
+    </div> -->
+  
     <!-- This is Modal for Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -137,6 +110,7 @@
         </div>
     </div>
     <br>
+  
     <!-- This Modal to Register -->
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
