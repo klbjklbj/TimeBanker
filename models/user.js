@@ -1,5 +1,5 @@
-module.exports = function(sequelize, DataTypes) {
-  var user = sequelize.define("user", {
+module.exports = function (sequelize, DataTypes) {
+  var User = sequelize.define("User", {
 
     firstName: {
       type: DataTypes.STRING,
@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: false
     },
-    
+
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -75,28 +75,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-
-<<<<<<< HEAD
-  user.sync().then(() => {
-    User.create({
-      firstName: 'Leonard',
-      lastName: 'Nimoy',
-      skill: 'Logic and Mind Melding',
-      email: 'spock@vulcan.con',
-      image: 'https://66.media.tumblr.com/c8945ee30829cb081e4c2eeaca115b16/tumblr_plxye0xXPy1w314t0o1_540.png'
-    });
-    user.create({
-      firstName: 'William',
-      lastName: 'Shatner',
-      skill: 'Captain',
-      email: 'kirk@enterprise.com',
-      image: 'https://www.gettyimages.com/detail/news-photo/canadian-actor-william-shatner-as-captain-james-t-kirk-in-news-photo/81792246'
-    });
-  });
-
-  return user;
-=======
   return User;
->>>>>>> 2050151e5d2f03b7ae196d674347100e449b9b72
 };
-

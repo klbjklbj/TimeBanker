@@ -1,6 +1,5 @@
 body {
   background-color: black;
-<<<<<<< HEAD
   background-image: url("../images/background.jpg");
 }
 #logo {
@@ -46,10 +45,6 @@ p {
 }
 #navbar {
   background-color: rgb(219, 226, 233);
-=======
-  background-image: url("https://blog.malwarebytes.com/wp-content/uploads/2014/04/photodune-7197630-time-concept-clock-on-digital-background-m.jpg")
-
->>>>>>> 2b2b6b1659da0eb2a5ca94a1d6ee5a8611d3a78b
 }
 
 #topBar {
