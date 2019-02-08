@@ -1,7 +1,55 @@
 body {
   background-color: black;
+<<<<<<< HEAD
+  background-image: url("../images/background.jpg");
+}
+#logo {
+  color: black;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15px;
+}
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 2px solid rgb(137, 184, 216);
+  border-radius: 8px;
+  margin-top: 46px;
+}
+#infoTimeBank {
+  margin-top: 46px;
+  color: #ffffff;
+  background-color: rgb(42, 102, 141);
+  opacity: 0.7;
+  font-size: 20px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid rgb(137, 184, 216);
+}
+.card-body {  
+  background-color: rgb(42, 102, 141);
+  color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid rgb(137, 184, 216);
+}
+.card {
+  opacity: 0.7;
+}
+h5 {
+  color: black;
+}
+p {
+  opacity: 1;
+}
+#navbar {
+  background-color: rgb(219, 226, 233);
+=======
   background-image: url("https://blog.malwarebytes.com/wp-content/uploads/2014/04/photodune-7197630-time-concept-clock-on-digital-background-m.jpg")
 
+>>>>>>> 2b2b6b1659da0eb2a5ca94a1d6ee5a8611d3a78b
 }
 
 #topBar {
@@ -47,14 +95,11 @@ footer{
   font-size: large;
   text-align: center;
   color: whitesmoke;
-  background-color: rgb(40, 38, 38);
-  padding: 0.75em;
-  padding-top:1em;
-  position: fixed;
+  background-color: rgb(73, 72, 72);
+  padding: 10px;
+  position: relative;
   width: 100%;
   bottom: 0;
   z-index: 4;
-}
-#registerModal {
-  
+  clear: both;
 }
