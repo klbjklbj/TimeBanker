@@ -1,8 +1,7 @@
 body {
   background-color: black;
-
   background-image: url("../images/time-wallpaper-23.jpg");
-
+  background-size: 100%;
 }
 #logo {
   color: white;
@@ -22,6 +21,11 @@ iframe {
   font-weight: bold;
   color: #b6b5b5;
 }
+#loginSubmit {
+  margin-left: 70px;
+  background-color: #808080;
+  border-color: #808080;
+}
 #infoTimeBank {
   margin-top: 46px;
   color: #ffffff;
@@ -32,14 +36,16 @@ iframe {
 p {
   opacity: 1;
 }
+form {
+  text-align: center;
+}
 
 #navbar {
   text-align: center;
   color: #ffffff;
-  border-color: #808080;
-  border: solid;
-  border-width: 2px; 
-
+  /* border-color: #808080; */
+  /* border: solid; */
+  /* border-width: 2px;  */
 }
 
 #topBar {
