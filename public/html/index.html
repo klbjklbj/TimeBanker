@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>TimeBanker</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -13,165 +14,191 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
     <!-- Google API recaptcha -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 
 <body>
+    <br>
     <!-- Modals for login and register -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8"></div>
-            <div class="col-md-2">
-                <li class="media" data-toggle="modal" data-target="#registerModal">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1">Register</h5>
-                    </div>
-                </li>
-            </div>
-            <div class="col-md-2">
-                <li class="media" data-toggle="modal" data-target="#loginModal">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1">Login</h5>
-                    </div>
-                </li>
-            </div>
+    <div class="row" id="navbar">
+        <div class="col-md-2">
+            <a href="./howitworks.html">
+                <h5 class="mt-5">How It Works</h5>
+            </a>
         </div>
-        <!-- This section is Navabar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <!-- <span class="navbar-toggler-icon"></span> -->
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="#">TimeBanker</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">How it Works<span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- This is Modal for Login -->
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                    aria-describedby="basic-addon1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <button id="submitLogin" type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
+        <div class="col-md-2">
+            <div class="media" data-toggle="modal" data-target="#registerModal">
+                <div class="media-body">
+                    <h5 class="mt-3">Register</h5>
                 </div>
             </div>
         </div>
-        <br>
-        <!-- This Modal to Register -->
-        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg" style="width:100%" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form name="formRegister" id="formRegister" action='/submit' method="post">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">First Name</label>
-                                    <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputLastName">Last name</label>
-                                    <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label for="inputEmail4">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Please Re-enter Password</label>
-                                    <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputAddress">Address</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                            </div>
-                            <div class="form-group">
-                                <label for="inputAddress2">Address 2</label>
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputCity">City</label>
-                                    <input type="text" class="form-control" id="inputCity">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="inputState">State</label>
-                                    <input type="text" id="inputState" class="form-control">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputZip">Zip</label>
-                                    <input type="text" class="form-control" id="inputZip">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputSkill">Phone</label>
-                                    <input type="text" class="form-control" id="inputPhone">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputSkill">Skill</label>
-                                    <input type="text" class="form-control" id="inputSkill">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-group col-md-12">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                            aria-describedby="inputGroupFileAddon01">
-                                        <label class="custom-file-label" for="inputGroupFile01">Choose photo</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="g-recaptcha" data-sitekey="6LckmY4UAAAAAEYkHkeeNOGpK5niQ0DfYe0q9CRv"></div>
-                            <button id="submitRegister" type="submit" class="btn btn-primary">Submit</button>
+        <div class="col-md-4">
+            <div class="navbar navbar-expand-lg navbar-light">
+                <div class="col-lg-12 text-center" id="topCenter">
+                    <a href="../html/index.html">
+                        <h1 id="logo" class="mt-4">TIMEBANKER</h1>
+                    </a>
+                </div>
+            </div>
 
-                        </form>
+        </div>
+        <div class="col-md-2">
+            <a href="mailto:webmaster@example.com">
+                <h5 class="mt-5">Contact us</h5>
+            </a>
+        </div>
+        <div class="col-md-2">
+            <h5 class="mt-5">Donate</h5>
+        </div>
+    </div>
+
+    <!-- Login -->
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="InputUsername">Username</label>
+                        <input type="Username" class="form-control" id="InputUsername" aria-describedby="emailHelp"
+                            placeholder="Enter Username">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="InputPassword">Password</label>
+                        <input type="password" class="form-control" id="InputPassword" placeholder="Password">
                     </div>
                 </div>
             </div>
+        </form>
+    </div>
+    <!-- Footer -->
+    <!-- <div class="row">
+        <footer>
+            <h6>Copyright &copy;</h6>
+        </footer>
+    </div> -->
+  
+    <!-- This is Modal for Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button id="submitLogin" type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
+    <br>
+  
+    <!-- This Modal to Register -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width:100%" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form name="formRegister" id="formRegister" action='/submit' method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputLastName">Last name</label>
+                                <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Please Re-enter Password</label>
+                                <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress2">Address 2</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <input type="text" id="inputState" class="form-control">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="inputSkill">Phone</label>
+                                <input type="text" class="form-control" id="inputPhone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputSkill">Skill</label>
+                                <input type="text" class="form-control" id="inputSkill">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group col-md-12">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Choose photo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="g-recaptcha" data-sitekey="6LckmY4UAAAAAEYkHkeeNOGpK5niQ0DfYe0q9CRv"></div>
+                        <button id="submitRegister" type="submit" class="btn btn-primary">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script>

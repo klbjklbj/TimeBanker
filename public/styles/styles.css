@@ -1,6 +1,48 @@
 body {
   background-color: black;
+<<<<<<< HEAD
   background-image: url("https://wonderfulengineering.com/wp-content/uploads/2014/10/time-wallpaper-23.jpg")
+=======
+
+  background-image: url("../images/time-wallpaper-23.jpg");
+
+}
+#logo {
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15px;
+}
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: 46px;
+}
+.mt-5, .mt-3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #b6b5b5;
+}
+#infoTimeBank {
+  margin-top: 46px;
+  color: #ffffff;
+  font-size: 20px;
+  width: 100%;
+  padding: 20px;
+}
+p {
+  opacity: 1;
+}
+
+#navbar {
+  text-align: center;
+  color: #ffffff;
+  border-color: #808080;
+  border: solid;
+  border-width: 2px; 
+>>>>>>> 9fe5c0c09e028af68b5314fe07c56b4b3138ace3
 
 }
 
@@ -47,14 +89,11 @@ footer{
   font-size: large;
   text-align: center;
   color: whitesmoke;
-  background-color: rgb(40, 38, 38);
-  padding: 0.75em;
-  padding-top:1em;
-  position: fixed;
+  background-color: rgb(73, 72, 72);
+  padding: 10px;
+  position: relative;
   width: 100%;
   bottom: 0;
   z-index: 4;
-}
-#registerModal {
-  
+  /* clear: both; */
 }
