@@ -22,7 +22,7 @@
 
 <body>
     <br>
-    <!-- Modals for login and register -->
+    <!-- Navbar -->
     <div class="row" id="navbar">
         <div class="col-md-2">
             <a href="./howitworks.html">
@@ -40,7 +40,7 @@
             <div class="navbar navbar-expand-lg navbar-light">
                 <div class="col-lg-12 text-center" id="topCenter">
                     <a href="../html/index.html">
-                        <h1 id="logo" class="mt-4">TIMEBANKER</h1>
+                        <h1 id="logo" class="mt-4">TIME<img src="../images/clock.gif" width="50" height="50">BANKER</h1>
                     </a>
                 </div>
             </div>
@@ -60,21 +60,28 @@
     <div class="container">
         <form>
             <div class="row">
-                <div class="col">
+                <div class="col-md-6 mt-5">
                     <div class="form-group">
-                        <label for="InputUsername">Username</label>
                         <input type="Username" class="form-control" id="InputUsername" aria-describedby="emailHelp"
                             placeholder="Enter Username">
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-md-6 mt-5">
                     <div class="form-group">
-                        <label for="InputPassword">Password</label>
                         <input type="password" class="form-control" id="InputPassword" placeholder="Password">
                     </div>
                 </div>
             </div>
         </form>
+        <div class="row mt-3">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <input class="btn btn-primary" type="submit" value="Submit" id="loginSubmit">
+            </div>
+        </div>
+
+    </div>
+
     </div>
     <!-- Footer -->
     <!-- <div class="row">
@@ -82,35 +89,7 @@
             <h6>Copyright &copy;</h6>
         </footer>
     </div> -->
-  
-    <!-- This is Modal for Login -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <button id="submitLogin" type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-  
+
     <!-- This Modal to Register -->
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
