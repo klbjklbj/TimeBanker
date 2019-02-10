@@ -4,7 +4,7 @@ require("dotenv").config();
 var express = require("express");
 
 // handlebars is a templating engine
-// var exphbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 
 // setting a variable names app to hold the function express()
 var app = express();
@@ -16,10 +16,8 @@ var PORT = process.env.PORT || 8080;
 var bodyParser = require("body-parser");
 var request = require("request");
 
-// this is for sequilize.  Sequilize will then syn our models with the database i.e. create our schemas and seeds
+// this is for Sequelize.  Sequelize will then sync our models with the database i.e. create our schemas and seeds
 var db = require("./models");
-
-
 
 // Middleware so that express will handle data parsing
 app.use(express.urlencoded({ extended: false }));

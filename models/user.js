@@ -34,7 +34,7 @@ module.exports = function (sequelize, DataTypes) {
 
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
 
     address: {
@@ -43,7 +43,7 @@ module.exports = function (sequelize, DataTypes) {
     },
 
     address2: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
 
     city: {
@@ -61,7 +61,7 @@ module.exports = function (sequelize, DataTypes) {
 
     zip: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
 
     phone: {
