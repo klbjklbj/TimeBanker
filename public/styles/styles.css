@@ -3,12 +3,34 @@ body {
   background-image: url("../images/time-wallpaper-23.jpg");
   background-size: 100%;
 }
+
+a:hover{
+  text-decoration: none;
+}
+
 #logo {
   color: white;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   margin-top: 15px;
+  text-decoration: none;
 }
+
+#logo:hover{
+  color: rgb(127, 208, 255);
+}
+
+.navLink:hover {
+  color: rgb(127, 208, 255);
+}
+
+/* I think in order to change the color of the clock, we need to add a semi transparent colored div over the top of it also I think I broke it becuase it doesn't move anymore... */
+#clockBox {
+  color: aqua;
+  text-shadow: .2em;
+}
+
+/* I dont think we need this can somebody please explain if we do? -Nate */
 iframe {
   display: block;
   margin-left: auto;
@@ -16,16 +38,35 @@ iframe {
   width: 100%;
   margin-top: 46px;
 }
+
 .mt-5, .mt-3 {
   font-size: 22px;
   font-weight: bold;
   color: #b6b5b5;
 }
+
+#loginContainer {
+  margin-top: 9em;
+}
+
+#loginSubmit:hover{
+    background-color: #f700ff;
+}
+
 #loginSubmit {
   margin-left: 70px;
   background-color: #808080;
   border-color: #808080;
 }
+
+#inputUserName{
+  border-radius: 25px;
+}
+
+#inputPassword{
+  border-radius: 25px;
+}
+
 #infoTimeBank {
   margin-top: 46px;
   color: #ffffff;
@@ -33,9 +74,11 @@ iframe {
   width: 100%;
   padding: 20px;
 }
+
 p {
   opacity: 1;
 }
+
 form {
   text-align: center;
 }
