@@ -12,14 +12,12 @@ var app = express();
 // This sets up the port so that it can be assigned by Heroku or listen on port8080 by default
 var PORT = process.env.PORT || 8080;
 
-
+// sets up body parser and request
 var bodyParser = require("body-parser");
 var request = require("request");
 
 // this is for sequilize.  Sequilize will then syn our models with the database i.e. create our schemas and seeds
 var db = require("./models");
-
-
 
 // Middleware so that express will handle data parsing
 app.use(express.urlencoded({ extended: false }));
@@ -88,9 +86,9 @@ var syncOptions = { force: false }; // check this out !!!
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
+// if (process.env.NODE_ENV === "test") {
+//   syncOptions.force = true;
+// }
 
 // Sequelize is taking our models files and rendering the data as directed by the code in those files (user.js) instead of us building the code in mysql, THEN once the schema has been run and the table created based on the definitions in the models folder, we are adding in some seed data to the User table.  THEN, once the seeds have been planted into the schema: start the server listening (for get and post requests from the localhost.) ------------------------------------/
 db.sequelize.sync(syncOptions).then(() => {
