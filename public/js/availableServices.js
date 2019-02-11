@@ -30,34 +30,36 @@ $(document).ready(function () {
                 .text(`Skill: ${currentUser.skill}`);
 
             // A solution I found for how to render multiple html elements with jquery to build the contact link: https://stackoverflow.com/questions/747178/how-to-create-multiple-html-elements-with-jquery
-            let contactLink = [
+            let accountUpdate = [
                 `<a href="mailto:${currentUser.email}">
-                    <h5 class="navLink" id="contactLink">
-                        Contact Me
+                    <h5 class="navLink" id="accountUpdate">
+                        Account Update
                     </h5>
                 </a>`
             ]
 
-            // create an update account button
-            let updateAcctBtn = $(`<button>`);
-                updateAcctBtn.attr(`class`, `acctBtn`);
-                updateAcctBtn.attr(`id`, currentUser.id);
-                updateAcctBtn.text(currentUser.id);
+            // create an update account button couldn't get positioning falling back to clicking on image for contact and turning the contact button into the account update button
+            // let updateAcctBtn = $(`<button>`);
+            //     updateAcctBtn.attr(`class`, `acctBtn`);
+            //     updateAcctBtn.attr(`id`, currentUser.id);
+            //     updateAcctBtn.text(currentUser.id);
+            //     updateAcctBtn.position()
 
             // this follows the ame pattern as the two lines of code above but the appends the two previous variables to it.
             let mediaBody = $(`<div class="media-body nameSkill" >`)
                 .append(name, skill);
 
             // .attr allows us to set a dynamic src attribute to the <img> tage specific to each user in the database.
-            let mediaImage = $(`<img class="mr-3" id="userImage" alt="This is a photograph of: ${fullName}">`)
-                .attr({
-                    src: currentUser.image
-                })
+            let mediaImage = [
+                `<a href="mailto:${currentUser.email}">
+                    <img class="mr-3" id="userImage" src=${currentUser.image} alt="This is a photograph of: ${fullName}">
+                </a>`
+            ]
 
             // here we append the users image and the media body which contains their unique name and skill to create the complete media-object 
             let mediaObject = $(`<li class="media" id="mediaObject">`)
-                .append(mediaImage, mediaBody, contactLink)
-                // .append(updateAcctBtn);
+                .append(mediaImage, mediaBody, accountUpdate)
+                
 
             // mediaContainer is the container for all of the media-objects so that we have a place to append them all after they are created
             let mediaContainer = $(`<ul class="list-unstyled" id="skillBank">`)
