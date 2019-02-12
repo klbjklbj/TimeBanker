@@ -12,9 +12,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-// this sets up express to be able to use files from a directory that the client downloads to use with the app.  These are known as "static" directories.
-app.use(express.static("public"));
-
 // For Passport
 app.use(session({
     secret: 'keyboard cat',
@@ -77,8 +74,6 @@ var models = require("./models");
 
 //Routes
 var authRoute = require('./routes/auth.js')(app, passport);
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
 
 //load passport strategies
 require('./config/passport/passport.js')(passport, models.User);
