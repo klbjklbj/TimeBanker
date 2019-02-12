@@ -6,10 +6,11 @@ const path = require("path");
 
 module.exports = function (app) {
 
-  // Sending HTML file to browser
-  // app.get('/', (req, res) => {
-  //   res.sendFile(__dirname + '/public/html/index.html');
-  // });
+  app.get('/', function (req, res) {
+    //res.send('Welcome to TimeBanker');
+    //res.render('index');
+    res.sendFile(path.join(__dirname, "../public", "/html/index.html"));
+});
 
   app.get('/signup', (req, res) => {
     res.render('signup');
@@ -23,13 +24,7 @@ module.exports = function (app) {
     res.render('dashboard');
   });
 
-  // app.get('/logout', (req, res) => {
-  //   req.session.destroy(function (err) {
-
-  //     res.redirect('/');
-  //   });
-
-    // Nate sending his media object html to the browser on the route /timeBank
+   // Nate sending his media object html to the browser on the route /timeBank
     app.get('/timeBank', (req, res) => {
       res.sendFile(path.join(__dirname, "../public", "/html/available_services.html"));
     });

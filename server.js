@@ -32,12 +32,6 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-app.get('/', function (req, res) {
-
-    res.send('Welcome to TimeBanker');
-
-});
-
 app.post("/subscribe", (req, res) => {
 
     // if it's blank or null means user has not selected the captcha, so return the error.
