@@ -2,8 +2,11 @@ body {
   background-color: black;
   background-image: url("../images/time-wallpaper-23.jpg");
   background-size: 100%;
+  background-position: no-repeat;
+
 }
 
+/* gets rid of blue underline for a tags */
 a:hover{
   text-decoration: none;
 }
@@ -30,7 +33,6 @@ a:hover{
   text-shadow: .2em;
 } */
 
-/* I dont think we need this can somebody please explain if we do? -Nate */
 iframe {
   display: block;
   margin-left: auto;
@@ -89,6 +91,10 @@ form {
   color: #ffffff;
 }
 
+#registerLink {
+  margin-top: 2.2em;
+}
+
 /******************************* Skill Bank page (see Index *above* for NavBar) *********************************** */
 
 #skillBank{
@@ -104,6 +110,7 @@ form {
 
 /* jquery media object in availableservices.js */
 #mediaObject{
+  background-color: rgba(19, 19, 19, 0.26);
   margin: 1em;
   padding-top: .6em;
   border: solid .04em white;
@@ -135,7 +142,7 @@ form {
   margin-top: 2.2em;
 }
 
-#contactLink{
+.accountUpdate{
   text-decoration: none;
   color:white;
   text-shadow: 2px 2px black;
@@ -146,16 +153,22 @@ form {
   padding: 0.3em;
   padding-bottom: 0.5em;
   border-radius: 1.2em;
-  font-size: .9em;
+  font-size: .8em;
   /* box-shadow: 1.4px 1.4px rgba(4, 238, 255, 0.459); */
   /* margin-right: 5em; */
 }
 
-#contactLink:hover{
+.accountUpdate:hover{
   color:rgba(255, 255, 255, 0.87);
   text-shadow: 2px 2px black;
   border: solid rgb(7, 164, 255) thin;
   background-color:rgb(27, 136, 199);
   /* box-shadow: -1.4px -1.4px rgba(6, 238, 255, 0.411) ; */
-  
 }
+
+/* giving up on this button positioning gets waaay crazy */
+/* .acctBtn {
+  color:red;
+  z-index: 2;
+  position: absolute;
+} */
