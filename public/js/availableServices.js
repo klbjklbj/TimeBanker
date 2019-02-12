@@ -30,22 +30,10 @@ $(document).ready(function () {
                 .text(`Skill: ${currentUser.skill}`);
 
             // A solution I found for how to render multiple html elements with jquery to build the contact link: https://stackoverflow.com/questions/747178/how-to-create-multiple-html-elements-with-jquery
-            let accountUpdate = [
-                `<a href="mailto:${currentUser.email}">
-                    <h5 class="navLink" id="accountUpdate">
-                        Account Update
-                    </h5>
-                </a>`
-            ]
+            let accountUpdate =$(`<h5 class="media" data-toggle="modal" data-target="#exampleModal" id="accountUpdate">`)
+                .text(`Account Update`)
 
-            // create an update account button couldn't get positioning falling back to clicking on image for contact and turning the contact button into the account update button
-            // let updateAcctBtn = $(`<button>`);
-            //     updateAcctBtn.attr(`class`, `acctBtn`);
-            //     updateAcctBtn.attr(`id`, currentUser.id);
-            //     updateAcctBtn.text(currentUser.id);
-            //     updateAcctBtn.position()
-
-            // this follows the ame pattern as the two lines of code above but the appends the two previous variables to it.
+            // this follows the same pattern as the two lines of code above but the appends the two previous variables to it.
             let mediaBody = $(`<div class="media-body nameSkill" >`)
                 .append(name, skill);
 
@@ -66,11 +54,16 @@ $(document).ready(function () {
                 .append(mediaObject);
 
             // media destination is necessary becuase we are using bootstrap rows and columns.  This allows us to control the size and position of the media container on the DOM.
-            let mediaDestination = $(`#centerBody`)
-                .append(mediaContainer);
+            $(`#centerBody`).append(mediaContainer);
 
         })
     })
+
+    $(document).on("click", "#accountUpdate", function (event) {
+        event.preventDefault();
+        console.log(`you clicked ${currentUser.id}`)
+        $("#exampleModal").modal("show");
+    });
 
 });
 
