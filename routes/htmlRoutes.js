@@ -11,6 +11,22 @@ module.exports = function (app) {
   //   res.sendFile(__dirname + '/public/html/index.html');
   // });
 
+  app.get('/signup', (req, res) => {
+    res.render('signup');
+  });
+
+  app.get('/signin', (req, res) => {
+    res.render('signin');
+  });
+
+  app.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+  });
+
+  app.get('/logout', (req, res) => {
+    res.render('logout');
+  });
+
   // Nate sending his media object html to the browser on the route /timeBank
   app.get('/timeBank', (req, res) => {
     res.sendFile(path.join(__dirname, "../public", "/html/available_services.html"));
@@ -37,12 +53,12 @@ module.exports = function (app) {
   // });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function (
-      dbExample
+  app.get("/userupdate/:id", function (req, res) {
+    db.User.findOne({ where: { id: req.params.id } }).then(function (
+      dbUser
     ) {
       res.render("example", {
-        example: dbExample
+        users: dbUser
       });
     });
   });

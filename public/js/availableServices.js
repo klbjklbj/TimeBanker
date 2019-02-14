@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     // console.log(allUsers);
 
-    // This is the event handler for the accountUpdate <h5> created on 
+    // This is the event handler for the accountUpdate <h5> created on line 43 
     $(document).on("click", ".accountUpdate", function (event) {
         event.preventDefault();
 
