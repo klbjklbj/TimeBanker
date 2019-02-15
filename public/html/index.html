@@ -7,14 +7,23 @@
     <title>TimeBanker</title>
 
     <!-- Bootsrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
-    
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
+
+
+    <!-- For Registration Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
@@ -88,15 +97,16 @@
     <!-- Login -->
     <div class="container" id="loginContainer">
 
-        <form>
-            <!-- Name Input Field -->
+        <form id="signin" name="signin" method="post" action="signin">
+
+            <!-- Username/Email Input Field -->
             <div class="row" id="userNameRow">
 
                 <div class="col-4 mt-5">
 
                     <div class="form-group">
-                        <input type="Username" class="form-control" id="inputUserName" aria-describedby="userName"
-                            placeholder="Enter Username">
+                        <input type="text" name="email" class="form-control" id="inputUserName"
+                            aria-describedby="userName" placeholder="Enter Username (Email)">
                     </div>
 
                 </div>
@@ -113,7 +123,8 @@
                 <div class="col-4 mt-5">
 
                     <div class="form-group">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" name="password" class="form-control" id="inputPassword"
+                            placeholder="Enter Password">
                     </div>
 
                 </div>
@@ -137,12 +148,10 @@
 
             </div>
 
+
         </form>
 
     </div>
-
-
-
 
     <!-- Footer -->
     <!-- <div class="row">
@@ -166,71 +175,79 @@
                 </div>
 
                 <div class="modal-body">
-                    <form name="formRegister" id="formRegister" action='/submit' method="post">
+                    <form name="signup" id="signup" action='/signup' method="post">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputName">First Name</label>
-                                <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+                                <input type="text" name="firstName" class="form-control" id="inputFirstName"
+                                    placeholder="First Name">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputLastName">Last name</label>
-                                <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+                                <input type="text" name="lastName" class="form-control" id="inputLastName"
+                                    placeholder="Last name">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" name="email" class="form-control" id="inputEmail"
+                                    placeholder="Email">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Password</label>
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                <input type="password" name="password" class="form-control" id="inputPassword"
+                                    placeholder="Password">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Please Re-enter Password</label>
-                                <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+                                <input type="password" name="password2" class="form-control" id="inputConfirmPassword"
+                                    placeholder="Confirm Password">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputAddress">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <input type="text" name="address" class="form-control" id="inputAddress"
+                                placeholder="1234 Main St">
                         </div>
                         <div class="form-group">
                             <label for="inputAddress2">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <input type="text" name="address2" class="form-control" id="inputAddress2"
+                                placeholder="Apartment, studio, or floor">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputCity">City</label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <input type="text" name="city" class="form-control" id="inputCity">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputState">State</label>
-                                <input type="text" id="inputState" class="form-control">
+                                <input type="text" name="state" id="inputState" class="form-control">
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="inputZip">Zip</label>
-                                <input type="text" class="form-control" id="inputZip">
+                                <input type="text" name="zip" class="form-control" id="inputZip">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="inputSkill">Phone</label>
-                                <input type="text" class="form-control" id="inputPhone">
+                                <input type="text" name="phone" class="form-control" id="inputPhone">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputSkill">Skill</label>
-                                <input type="text" class="form-control" id="inputSkill">
+                                <input type="text" Name="skill" class="form-control" id="inputSkill">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-group col-md-12">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choose photo</label>
-                                </div>
+                            <div class="form-group col-md-12">  
+                                <label for="inputSkill">Your Photo - Please include full URL</label>                              
+                                <input type="text" name="image" class="form-control" id="inputPhoto"
+                                    aria-describedby="inputPhoto">
+                                
+
                             </div>
                         </div>
                         <br>

@@ -1,19 +1,25 @@
 module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User", {
 
+    id: {
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER
+    },
+
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     skill: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     email: {
@@ -24,7 +30,10 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
 
-    image: DataTypes.TEXT,
+    image: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
 
     isLoggedOn: {
       type: DataTypes.BOOLEAN,
@@ -34,26 +43,27 @@ module.exports = function (sequelize, DataTypes) {
 
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
 
     address: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     address2: {
       type: DataTypes.STRING,
+      allowNull: true
     },
 
     city: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
 
     state: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         isUppercase: true
       }
@@ -61,11 +71,12 @@ module.exports = function (sequelize, DataTypes) {
 
     zip: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true
     },
 
     phone: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: true
     },
 
     personHours: {

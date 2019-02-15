@@ -6,9 +6,23 @@ const path = require("path");
 
 module.exports = function (app) {
 
-  // Sending HTML file to browser
-  // app.get('/', (req, res) => {
-  //   res.sendFile(__dirname + '/public/html/index.html');
+  app.get('/', function (req, res) {
+    //res.send('Welcome to TimeBanker');
+    //res.render('index');
+    res.sendFile(path.join(__dirname, "../public", "/html/index.html"));
+  });
+
+  app.get('/signup', (req, res) => {
+    res.render('signup');
+  });
+
+  app.get('/signin', (req, res) => {
+    res.render('signin');
+  });
+
+  // app.get('/dashboard', (req, res) => {
+  //   // res.render('dashboard');
+  //   res.sendFile(path.join(__dirname, "../public", "/html/available_services.html"));
   // });
 
   app.get('/signup', (req, res) => {
@@ -32,15 +46,20 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public", "/html/available_services.html"));
   });
 
-    // TODO: Nate needs to know what this does: Loading the available_services.html
-    app.get("/timeBank", function (req, res) {
-      db.User.findAll({}).then(function(dbUser) {
-        res.sendFile("available_services", {
-          msg: "Welcome!",
-          users: dbUser
-        });
+  // Nate sending his media object html to the browser on the route /timeBank
+  app.get('/howitworks', (req, res) => {
+    res.sendFile(path.join(__dirname, "../public", "/html/howitworks.html"));
+  });
+
+  // TODO: Nate needs to know what this does: Loading the available_services.html
+  app.get("/timeBank", function (req, res) {
+    db.User.findAll({}).then(function (dbUser) {
+      res.sendFile("available_services", {
+        msg: "Welcome!",
+        users: dbUser
       });
     });
+  });
 
   // Load index page
   // app.get("/", function (req, res) {
@@ -65,7 +84,7 @@ module.exports = function (app) {
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
-    res.send("thing!")
-    // res.render("404");
+    //res.send("thing!")
+    res.render("404");
   });
 };

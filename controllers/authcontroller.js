@@ -1,4 +1,4 @@
-var exports = module.exports = {}
+var exports = module.exports = {};
 
 
 exports.signup = function (req, res) {
@@ -12,6 +12,13 @@ exports.signin = function (req, res) {
   res.render('signin');
 
 };
+
+exports.timebank = function (req, res) {
+
+  res.render('timebank');
+
+};
+
 
 exports.dashboard = function (req, res) {
 

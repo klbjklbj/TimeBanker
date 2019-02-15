@@ -10,13 +10,13 @@ $(document).ready(function () {
             });
         },
 
-        postUserId: function (id) {
+        updateUserAccount: function (id) {
+            console.log('update user account hello');
             return $.ajax({
-
                 url: "api/userupdate/" + id,
                 type: "GET",
                 data: id
-            })
+            });
         }
 
     };
@@ -66,30 +66,40 @@ $(document).ready(function () {
             //This allows us to control the size and position of the media container on the DOM.
             $(`#centerBody`).append(mediaContainer);
 
-            
-            // return currentUser;
+
+            // return allUsers;
 
         })
         // FIXME: I need to be able to get at this variable to handle account update functionality
         // return allUsers;
     })
 
-    // console.log(allUsers);
+    // return allUsers;
 
-    // This is the event handler for the accountUpdate <h5> created on line 43 
+    // This is the event handler for the accountUpdate <h5> created on 
     $(document).on("click", ".accountUpdate", function (event) {
         event.preventDefault();
 
-        let id = $(this).attr("id")
+        let id = $(this).attr("id");
 
-        API.postUserId(id).then(function (userToUpdate) {
-            console.log(`the id: ${id} was posted`);
-        })
-        
         console.log(`you clicked: ${id}`);
 
+        var newModalWithID = function(id) {
             $("#exampleModal").modal("toggle");
-        // });
+            $("#submitPersonHours").attr("data-userId", id)
+        }
+        
+        newModalWithID(id);
+
+        $(document).on("click", "#submitPersonHours", function (event) {
+            console.log('you clicked the ')
+            API.updateUserAccount(id).then(function (userToUpdate) {
+                console.log(`the id: ${id} was posted`);
+            })
+
+            // });
+
+        })
 
     });
 

@@ -32,7 +32,7 @@ module.exports = function (passport, user) {
                 if (user) {
 
                     return done(null, false, {
-                        message: 'That email is already taken'
+                        message: 'That email is already taken' //This msg doesn't show up?
                     });
 
                 } else {
@@ -152,7 +152,9 @@ module.exports = function (passport, user) {
                 if (!user) {
 
                     return done(null, false, {
-                        message: 'Email does not exist'
+                        alert("Oops");
+                    message: 'Email does not exist'
+                    alert("Oops");
                     });
 
                 }
