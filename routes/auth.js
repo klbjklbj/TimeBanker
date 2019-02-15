@@ -12,11 +12,11 @@ module.exports = function (app, passport) {
   ));
 
   //*************** */Dashboard needs to be replaced with our protected area which is '/timebank', which is our available_services.html page ********************* 
-  app.get('/dashboard', isLoggedIn, authController.dashboard);
+  //app.get('/dashboard', isLoggedIn, authController.dashboard);
 
   // This code below gives an error message of "Failed to lookup view "timebank" in views directory "./views""
 
-  // app.get('/timebank', isLoggedIn, authController.timebank);
+  app.get('/timebank', isLoggedIn);
 
   app.get('/logout', authController.logout);
 
