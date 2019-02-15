@@ -97,8 +97,6 @@ $(document).ready(function () {
                 console.log(`the id: ${id} was posted`);
             })
 
-            // });
-
         })
 
     });

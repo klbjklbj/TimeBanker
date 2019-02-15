@@ -9,7 +9,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get("api/userupdate/:id", function (req, res) {
+  app.get("/api/userupdate/:id", function (req, res) {
     console.log(`hello`);
     db.User.findAll({
       where: {
