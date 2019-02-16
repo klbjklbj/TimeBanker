@@ -10,15 +10,29 @@ module.exports = function (app) {
   });
 
   app.get("/api/userupdate/:id", function (req, res) {
-    console.log(`hello`);
     db.User.findAll({
       where: {
-        id: req.params.id,
+        id: req.body.id
       }
-    }).then(function (dbUserSpecific) {
-      console.log(`DB QUERY FOR SPECIFIC USER ID: ${dbUserSpecific}`);
-
+    }).then(function (response) {
+      res.json(response)
     })
+  })
+
+  app.put("/api/userupdate", function (req, res) {
+
+    let newCredit = req.body.personHours
+    console.log(newCredit);
+
+    db.User.update({ personHours: newCredit },
+      {
+        where: {
+          id: req.body.id,
+        }
+      }).then(function (response) {
+        // console.log(`updated person hours now: ${res.params.personHours}`);
+        res.json(response)
+      });
 
   });
 
@@ -30,11 +44,11 @@ module.exports = function (app) {
   // });
 
   // User Login
-  app.post("/api/examples", function (req, res) {
-    db.Example.create(req.body).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
+  // app.post("/api/examples", function (req, res) {
+  //   db.Example.create(req.body).then(function (dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
 
   // Delete an example by id
 

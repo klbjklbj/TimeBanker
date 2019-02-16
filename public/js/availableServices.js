@@ -5,17 +5,26 @@ $(document).ready(function () {
         // this function is an ajax request to get all the data from the given route
         getUsers: function () {
             return $.ajax({
-                url: "api/users",
+                url: "/api/users",
                 type: "GET"
             });
         },
 
         updateUserAccount: function (id) {
-            console.log('update user account hello');
+            console.log('updateUserAccount hello');
             return $.ajax({
-                url: "api/userupdate/" + id,
+                url: "/api/userupdate/" + id,
                 type: "GET",
                 data: id
+            });
+        },
+
+        updatePersonHours: function (id, personHours) {
+            console.log('update personHours hello');
+            return $.ajax({
+                url: "api/userupdate",
+                type: "PUT",
+                data: { id, personHours: personHours }
             });
         }
 
@@ -35,6 +44,9 @@ $(document).ready(function () {
             let name = $(`<h5 class="mt-0 mb-1 id="nameDisplay">`)
                 .text(`Name: ${fullName}`);
 
+            let personHoursDisplay = $(`<p id="accountBalance">`)
+                .text(`Total Person Hours: ${currentUser.personHours}`);
+
             // variable that dynamically creates an html <p> tag and using .text() inserts the text found in the skill column of the userdb
             let skill = $(`<p id="skillText">`)
                 .text(`Skill: ${currentUser.skill}`);
@@ -44,8 +56,8 @@ $(document).ready(function () {
                 .text(`Account Update`)
 
             // this follows the same pattern as the two lines of code above but the appends the two previous variables to it.
-            let mediaBody = $(`<div class="media-body nameSkill" >`)
-                .append(name, skill);
+            let mediaBody = $(`<div class="media-body nameSkillPersonHours" >`)
+                .append(name, personHoursDisplay, skill);
 
             // .attr allows us to set a dynamic src attribute to the <img> tage specific to each user in the database.
             let mediaImage = [
@@ -53,6 +65,8 @@ $(document).ready(function () {
                     <img class="mr-3" id="userImage" src=${currentUser.image} alt="This is a photograph of: ${fullName}">
                 </a>`
             ]
+
+
 
             // here we append the users image and the media body which contains their unique name and skill to create the complete media-object 
             let mediaObject = $(`<li class="media" id="mediaObject">`)
@@ -84,20 +98,23 @@ $(document).ready(function () {
 
         console.log(`you clicked: ${id}`);
 
-        var newModalWithID = function(id) {
-            $("#exampleModal").modal("toggle");
+        var newModalWithID = function (id) {
+            $("#updateAccountModal").modal("toggle");
             $("#submitPersonHours").attr("data-userId", id)
         }
-        
+
         newModalWithID(id);
 
         $(document).on("click", "#submitPersonHours", function (event) {
-            console.log('you clicked the ')
-            API.updateUserAccount(id).then(function (userToUpdate) {
-                console.log(`the id: ${id} was posted`);
+            event.preventDefault();
+            let personHours = $("#inputPersonHours").val()
+            console.log(`you want to add ${personHours}`);
+            API.updatePersonHours(id, personHours).then(function (response) {
+                $(this).personHoursDisplay.txt(personHours)
+                console.log(`response:`, response);
             })
 
-        })
+        });
 
     });
 

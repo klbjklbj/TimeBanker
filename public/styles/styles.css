@@ -124,8 +124,8 @@ form {
   border-radius: 5em;
 }
 
-.nameSkill{
-  margin: 1em;
+.nameSkillPersonHours{
+  /* margin: 1em; */
   text-shadow: 5px 5px 2px black;
   margin-left: 1.2em;
 }
@@ -139,7 +139,12 @@ form {
 }
 
 #skillText{
-  margin-top: 2.2em;
+  /* margin-top: 2.2em; */
+}
+
+#accountBalance{
+  margin-top: 1em;
+  color: greenyellow;
 }
 
 .accountUpdate{

@@ -64,9 +64,6 @@ module.exports = function (sequelize, DataTypes) {
     state: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: {
-        isUppercase: true
-      }
     },
 
     zip: {

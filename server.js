@@ -68,7 +68,7 @@ var apiRoute =require("./routes/apiRoutes")(app, passport);
 var htmlRoute = require("./routes/htmlRoutes")(app, passport);
 
 //load passport strategies
-// require('./config/passport/passport.js')(passport, models.User);
+require('./config/passport/passport.js')(passport, models.User);
 
 //Calling the Sequelize sync function
 models.sequelize.sync().then(function () {
