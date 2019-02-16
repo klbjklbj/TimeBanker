@@ -1,36 +1,36 @@
 # Project Title
 
-One Paragraph of project description goes here
+Building a time bank that can exchange time hours of work as a virtual currency.
 
 ## Getting Started
 
 ### Overview
+
 The purpose of this project is to present members of a neighborhood or community with a platform, a time bank, that can strengthen their bonds among each other by engaging in activities or public services that can benefit others. The giver of services will receive credit from receivers. Since people live in the same neighborhood assume to have the same class, their time equivalence can also be assumed. One hour of service is tantamount to one credit, and the exchange of credit is followed by the completion of tasks demanded by receivers.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Packages installed in this app:
 
 ```
-Give examples
+npm install --save sequelize
+npm install --save passport
+npm install --save bcrypt-nodejs
+npm install --save express
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
 ```
-Give the example
-```
+git clone https://github.com/Zhangjt9317/Project-2-Armadillos.git ## clone the repo to the local machine
 
-And repeat
+cd Project-2-Armadillos ## switch the directory to the downloaded repo
 
-```
-until finished
+npm install ## install the packages
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -43,18 +43,10 @@ The project testing is performed by Karma and Nightmare, both
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+Tests will be run with mocha and chai, there are three tests included in the packages: canary test, get test and post test. 
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+npm run mocha
 ```
 
 ## Deployment
@@ -89,10 +81,3 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
