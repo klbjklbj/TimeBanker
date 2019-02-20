@@ -73,7 +73,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Nathaniel Holdsworth** - *UI design, frontend* - [see me](https://github.com/nholdsworth)
 
-* **Kristen Johanson** - *Login, frontend* - [see me](https://github.com/klbjklbj)
+* **Kristen Johanson** - *Login, Registration* - [see me](https://github.com/klbjklbj)
 
 * **Zarina Mazieva** - *backend* - [see me](https://github.com/zmazieva78)
 
