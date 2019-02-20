@@ -55,9 +55,10 @@ This project app is deployed on Heroku with the database
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* HTML, Bootstrap, CSS
+* Javascript, Node.js, Express, Passport, bCrypt, reCAPTCHA
+* MySQL, Sequelize
+* Mocha & Chai for testing
 
 ## Contributing
 
