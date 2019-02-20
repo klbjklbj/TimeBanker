@@ -17,7 +17,7 @@ Packages installed in this app:
 ```
 npm install --save sequelize
 npm install --save passport
-npm install --save bcrypt-nodejs
+npm install --save bcrypt
 npm install --save express
 ```
 
