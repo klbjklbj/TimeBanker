@@ -4,7 +4,7 @@ This app allows users of a community to register and update their accounts for a
 
 ### Overview
 
-![Timebanker image]("./public/images/Timebanker.png")
+![image1](./public/images/Timebanker.png)
 
 The purpose of this project is to present members of a neighborhood or community with a platform, a time bank, that can strengthen their bonds among each other by engaging in activities or public services that can benefit others. The giver of services will receive credit from receivers. Since people live in the same neighborhood assume to have the same class, their time equivalence can also be assumed. One hour of service is tantamount to one credit, and the exchange of credit is followed by the completion of tasks demanded by receivers.
 
