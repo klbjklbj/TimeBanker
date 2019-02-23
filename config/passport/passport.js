@@ -151,8 +151,9 @@ module.exports = function (passport, user) {
 
                 if (!user) {
 
-                    return done(null, false);
-
+                    return done(null, false, {
+                        message: "Email does not exist",
+                    });
                 }
 
                 if (!isValidPassword(user.password, password)) {
