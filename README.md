@@ -1,6 +1,6 @@
-# Project Title
+# TimeBanker
 
-Building a time bank that can exchange time hours of work as a virtual currency.
+This app allows users of a community to register and update their accounts for a time bank that can exchange time hours of work as a virtual currency.
 
 ## Getting Started
 
@@ -10,20 +10,15 @@ The purpose of this project is to present members of a neighborhood or community
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+## Built With
 
-Packages installed in this app:
+* HTML, Bootstrap, CSS
+* Javascript, Node.js, Express, Passport, bCrypt, reCAPTCHA
+* MySQL, Sequelize
+* Mocha & Chai for testing
 
-```
-npm install --save sequelize
-npm install --save passport
-npm install --save bcrypt
-npm install --save express
-```
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
 
 ```
 git clone https://github.com/Zhangjt9317/Project-2-Armadillos.git ## clone the repo to the local machine
@@ -35,11 +30,6 @@ npm install ## install the packages
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-The project testing is performed by Karma and Nightmare, both 
 
 ### Break down into end to end tests
 
@@ -53,32 +43,13 @@ npm run mocha
 
 This project app is deployed on Heroku with the database
 
-## Built With
-
-* HTML, Bootstrap, CSS
-* Javascript, Node.js, Express, Passport, bCrypt, reCAPTCHA
-* MySQL, Sequelize
-* Mocha & Chai for testing
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
 * **Jingtian Zhang** - *backend* - [see me](https://github.com/Zhangjt9317)
 
-* **Nathaniel Holdsworth** - *UI design, frontend* - [see me](https://github.com/nholdsworth)
+* **Nathaniel Holdsworth** - *UI design, backend* - [see me](https://github.com/nholdsworth)
 
 * **Kristen Johanson** - *Login, Registration* - [see me](https://github.com/klbjklbj)
 
-* **Zarina Mazieva** - *backend* - [see me](https://github.com/zmazieva78)
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Zarina Mazieva** - *UI design, frontend* - [see me](https://github.com/zmazieva78)
