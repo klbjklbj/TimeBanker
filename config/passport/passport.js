@@ -6,7 +6,7 @@ module.exports = function (passport, user) {
 
     var User = user;
     var LocalStrategy = require('passport-local').Strategy;
-
+    // something here is not working: Error: Unknown authentication strategy "local-signup"
     passport.use('local-signup', new LocalStrategy(
 
         {
@@ -150,6 +150,7 @@ module.exports = function (passport, user) {
             }).then(function (user) {
 
                 if (!user) {
+
                     return done(null, false, {
                         message: "Email does not exist",
                     });
