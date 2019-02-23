@@ -50,6 +50,6 @@ This project app is deployed on Heroku with the database
 
 * **Nathaniel Holdsworth** - *UI design, backend* - [see me](https://github.com/nholdsworth)
 
-* **Kristen Johanson** - *Login, Registration* - [see me](https://github.com/klbjklbj)
+* **Kristen Johanson** - *User Authentication - Login, Registration* - [see me](https://github.com/klbjklbj)
 
 * **Zarina Mazieva** - *UI design, frontend* - [see me](https://github.com/zmazieva78)
