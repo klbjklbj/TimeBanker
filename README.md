@@ -10,7 +10,7 @@ The purpose of this project is to present members of a neighborhood or community
 
 ## How it Works
 
-On the Home Page users can register (using the Register modal) and once they're registered, they can log into use TimeBanker. Whn logged in users can update their accounts
+On the Home Page users can register (using the Register modal) and once they're registered, they can log into use TimeBanker. When logged in users can update their accounts by hitting the account update button.
 
 ## Built With
 
@@ -50,7 +50,9 @@ npm run mocha
 
 ## Room for Improvements
 
-Currently the registration page refreshes if there are any errors.
+Error Messaging to Users - Currently both the registration and login pages refresh if there are any errors without providing any notification to the user. This project will benefit greatly once flash messaging is incorporated to let users know what they need to change.
+
+
 
 
 ## Authors
