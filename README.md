@@ -50,9 +50,11 @@ npm run mocha
 
 ## Room for Improvements
 
-Error Messaging to Users - Currently both the registration and login pages refresh if there are any errors without providing any notification to the user. This project will benefit greatly once flash messaging is incorporated to let users know what they need to change.
+Error Messaging to Users - Currently both the registration and login pages refresh if there are any errors upon submission without providing any notification to the user. This project will benefit greatly once flash messaging is incorporated to let users know what they need to change.
 
+Password Reset/Recovery function
 
+Account History function for users
 
 
 ## Authors
