@@ -19,9 +19,9 @@ On the Home Page users can register (using the Register modal) and once they're 
 * MySQL, Sequelize
 * Mocha & Chai for testing
 
-### Getting Started
+## Getting Started
 
-## Deployment
+### Deployment
 
 This project app is deployed on Heroku with the database at 
 
