@@ -29,13 +29,13 @@ This project app is deployed on Heroku with the database at
 ### To install on a local machine
 
 ```
-git clone https://github.com/Zhangjt9317/Project-2-Armadillos.git ## clone the repo to the local machine
+git clone https://github.com/klbjklbj/TimeBanker.git ## clone the repo to the local machine
 
-cd Project-2-Armadillos ## switch the directory to the downloaded repo
+cd TimeBanker ## switch the directory to the downloaded repo
 
 npm install ## install the packages
  
-An SQL Schema is included in the Models folder for the database
+An SQL Schema is included in the Models folder for recreating the database
 
 ```
 
